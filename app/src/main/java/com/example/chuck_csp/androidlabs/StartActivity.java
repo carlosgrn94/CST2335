@@ -19,7 +19,9 @@ public class StartActivity extends Activity {
         setContentView(R.layout.activity_start);
 
         final Button button = (Button)findViewById(R.id.buttonStart);
+        final Button buttonChat = (Button)findViewById(R.id.buttonChat);
 
+        //Button "I'm a button"
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -27,6 +29,19 @@ public class StartActivity extends Activity {
                 startActivityForResult(intent, 10);
             }
         });
+
+
+
+        //Button "Start Chat"
+        buttonChat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(StartActivity.this, ChatWindow.class);
+                startActivity(intent);
+                Log.i(ACTIVITY_NAME, "User Clicked Start Chat");
+            }
+        });
+
     }
 
     @Override

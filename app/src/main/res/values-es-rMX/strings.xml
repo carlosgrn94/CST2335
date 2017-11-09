@@ -8,6 +8,8 @@
     <string name="What_does_this_do">¿Que hace esto?</string>
     <string name="dialog_message">¿Terminar actividad?</string>
     <string name="dialog_title">Mensaje CheckBox</string>
+    <string name="buttonChat">Empezar chat</string>
     <string name="ok">OK</string>
     <string name="cancel">Cancelar</string>
+    <string name="buttonSendChat">Enviar</string>
 </resources>
