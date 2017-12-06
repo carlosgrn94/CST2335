@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.StrictMode;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -18,8 +19,12 @@ public class StartActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
 
+        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+        StrictMode.setThreadPolicy(policy);
+
         final Button button = (Button)findViewById(R.id.buttonStart);
         final Button buttonChat = (Button)findViewById(R.id.buttonChat);
+        final Button buttonWeatherForecaste = (Button)findViewById(R.id.buttonWeatherForecast);
 
         //Button "I'm a button"
         button.setOnClickListener(new View.OnClickListener() {
@@ -27,6 +32,7 @@ public class StartActivity extends Activity {
             public void onClick(View v) {
                 Intent intent = new Intent(StartActivity.this, ListItemsActivity.class);
                 startActivityForResult(intent, 10);
+                Log.i(ACTIVITY_NAME, "Opening ListItemsActivity...");
             }
         });
 
@@ -38,7 +44,17 @@ public class StartActivity extends Activity {
             public void onClick(View v) {
                 Intent intent = new Intent(StartActivity.this, ChatWindow.class);
                 startActivity(intent);
-                Log.i(ACTIVITY_NAME, "User Clicked Start Chat");
+                Log.i(ACTIVITY_NAME, "Opening ChatWindow...");
+            }
+        });
+
+        //Button to open Weather Forecast Activity
+        buttonWeatherForecaste.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(StartActivity.this, WeatherForecast.class);
+                startActivity(intent);
+                Log.i(ACTIVITY_NAME, "Opening WeatherForecast...");
             }
         });
 

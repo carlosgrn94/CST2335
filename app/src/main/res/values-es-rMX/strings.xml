@@ -12,4 +12,5 @@
     <string name="ok">OK</string>
     <string name="cancel">Cancelar</string>
     <string name="buttonSendChat">Enviar</string>
+    <string name="buttonWeatherForecast">Clima</string>
 </resources>
