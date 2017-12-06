@@ -13,6 +13,10 @@
     <string name="ok">OK</string>
     <string name="cancel">Cancelar</string>
     <string name="buttonSendChat">Enviar</string>
+< Lab6
+    <string name="buttonWeatherForecast">Clima</string>
 =======
+=======
+> master
 > master
 </resources>
