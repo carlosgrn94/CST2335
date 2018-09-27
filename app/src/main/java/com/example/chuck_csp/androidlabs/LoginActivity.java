@@ -1,6 +1,7 @@
 package com.example.chuck_csp.androidlabs;
 
 import android.app.Activity;
+< Lab5
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -19,10 +20,17 @@ public class LoginActivity extends Activity {
     private static final String KEY_EMAIL = "Default email";
 
 
+=======
+import android.os.Bundle;
+
+public class LoginActivity extends Activity {
+
+> master
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+< Lab5
         Log.i(ACTIVITY_NAME,"In onCreate()");
 
         final SharedPreferences sharedP = getSharedPreferences(FILE_NAME, Context.MODE_PRIVATE);
@@ -75,5 +83,7 @@ public class LoginActivity extends Activity {
     protected void onResume() {
         super.onResume();
         Log.i(ACTIVITY_NAME,"In onResume()");
+=======
+> master
     }
 }

@@ -4,6 +4,7 @@
     <string name="ButtonText">I\’m a button!!</string>
     <string name="LoginText">Login</string>
     <string name="PasswordText">Password</string>
+< Lab5
     <string name="What_does_this_do">What does this do</string>
     <string name="dialog_message">Finish activity?</string>
     <string name="dialog_title">CheckBox Title</string>
@@ -11,4 +12,10 @@
     <string name="ok">OK</string>
     <string name="cancel">Cancel</string>
     <string name="buttonSendChat">Send</string>
+< Lab6
+    <string name="buttonWeatherForecast">Weather Forecast</string>
+=======
+=======
+> master
+> master
 </resources>
